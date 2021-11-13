@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body
+        {
+            padding: 3em;
+        }
+       #v0
+       {
+           position: fixed;
+           bottom: 0;
+           right: 0;
+           width: 100%;
+       }
+
+       #set-heigth
+       {
+           display: block;
+       }
+
+
+    </style>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <p>simrat singh</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <p>simrat singh</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <p>simrat singh</p>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="set-height"></div>
+    <video id="v0" tabindex="0", autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/bwtransition.mp4"></source>
+        </video>
+<script>
+
+var frameNumber = 0, // start video at frame 0
+    // lower numbers = faster playback
+    playbackConst = 500, 
+    // get page height from video duration
+    setHeight = document.getElementById("set-height"), 
+    // select video element         
+    vid = document.getElementById('v0'); 
+    // var vid = $('#v0')[0]; // jquery option
+
+// dynamically set the page height according to video length
+vid.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+});
+
+
+// Use requestAnimationFrame for smooth playback
+function scrollPlay(){  
+  var frameNumber  = window.pageYOffset/playbackConst;
+  vid.currentTime  = frameNumber;
+  window.requestAnimationFrame(scrollPlay);
+}
+
+window.requestAnimationFrame(scrollPlay);
+
+
+
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" fill="#000" fill-opacity="0.7"><path d="M1518.5 1279.5c3.6 30.4 44.5 119.33 64.5 160h394.5c14.8-22.8 23.5-75.17 26-98.5 1.83-30.83-.8-107.4-26-167-31.5-74.5-122-63-152.5-58s-197 49-242 67.5-69 58-64.5 96zm-985.5 93c4.26-26.78 23-34.67 35-38.5 33.5-8.5 64.501 16 76.001 38.5s-3 61.5-47 66.5-67.501-44.5-64.001-66.5zm419.5-51.5c-20.4 30.8-27.5 92.17-28.5 119h366c-28-132.5-111-177.5-196-183s-116 25.5-141.5 64z"/></svg>
+
+</body>
+</html>

@@ -1,0 +1,1533 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+/* @import url('http://fonts.cdnfonts.com/css/anurati'); font-family: 'Anurati', sans-serif; */
+                                                
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+    
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO START*/
+
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+.logo {
+    padding-top: 5px;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lname {
+    font-family: 'Cookie', cursive;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    padding-top: 27px;
+    padding-left: 20px;
+    color: white;
+}
+
+a.lname:hover {
+    color: white;
+    background: none;
+}
+
+.slogan {
+    font-size: 10px;
+    font-family: arial;
+    color: black;
+    padding-left: 37px;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    padding-right: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+a.active {
+    background: linear-gradient(to right, rgb(127, 195, 235), rgba(255, 0, 234, 0.938));
+    transition: .4s;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgb(54, 50, 50);
+    background: white;
+    transition: .6s;
+    text-shadow: none;
+}
+
+a.contact {
+    border-radius: 20px;
+    border: 2.5px solid;
+    border-color: white;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: purple;
+    }
+    50% {
+        border-color: cyan;
+    }
+    75% {
+        border-color: lime;
+    }
+    100% {
+        border-color: yellow;
+        ;
+    }
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#copyright, #heart
+{
+    display: none;
+    
+}
+
+
+/* MEDIA FOR NAVIGATION BAR AND LOGO */
+
+@media (max-width: 992px) {
+    nav ul li a {
+        font-size: 16px;
+        z-index: 10;
+        
+    }
+    .logo{
+        padding-left:15px ;
+    }
+    .checkbtn {
+        display: block;
+        padding-right: 2px;
+        padding-top: 6px;
+    }
+  
+}
+
+@media (max-width: 1110px) {
+    .checkbtn {
+        display: block;
+        padding-right: 10px;
+        z-index: 10;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        padding-top: 10px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    a.contact {
+        color: white;
+        border: none;
+    }
+    a.contact:hover {
+        color: #0082e6;
+        border: none;
+    }
+    #copyright
+    {
+        display: block;
+        padding-top: 30px;
+        color: grey;
+        display: inline-block;
+        
+        
+    }
+    #heart
+    {
+        color: red;
+        display: inline-block;
+        padding-left: 5px;
+        
+    }
+
+}
+
+@media (max-width: 450px) {
+    .lname {
+        display: none;
+        z-index: 10;
+    }
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO END */
+
+
+/* LANDING IMAGE SECTION  */
+
+.e1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/landing.png");
+    background-position: center;
+    background-size: cover;
+    top: 0%;
+}
+
+.lan1 {
+    float: right;
+    padding-right: 4px;
+    padding-top: 30px;
+    width: 50%;
+}
+
+#text1 {
+    padding-top: 190px;
+    padding-left: 60px;
+    font-family: sans-serif;
+    text-shadow: 1px 1px rgb(24, 0, 0,0.2);
+}
+
+#text2 {
+    padding-top: 10px;
+    padding-left: 55px;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(24, 0, 0,0.3);
+    animation: fadeIn linear 4s;
+    -webkit-animation: fadeIn linear 4s;
+    animation-delay: .5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#text3 
+{
+    padding-top:20px;
+    padding-left:60px;
+    font-size: 140%;
+    font-family: sans-serif; 
+    display:inline-block; 
+    text-shadow: 1px 1px rgb(24, 0, 0,0.3); 
+}
+.text4
+{
+    padding-top:10px;
+    padding-left:10px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color:rgb(255, 93, 93);
+    text-shadow: 1px 1px rgb(24, 0, 0,0.3);
+    
+}
+
+
+.buttons
+{
+    padding-left: 55px;
+    padding-top: 50px;
+}
+.b1 {
+    font: .9em Raleway, sans-serif;
+    height: 2.5rem;
+    letter-spacing: 0.05em;
+    width: 7rem;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px rgb(54, 50, 50,0.29);
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(248, 111, 237, 0.938) 0%, rgb(127, 195, 235) 50%, #ee786e 100%);
+    -webkit-gradient:(to right, rgba(248, 111, 237, 0.938) 0%, rgb(127, 195, 235) 50%, #ee786e 100%);
+    background-size: 500%;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(11, 51, 230, 0.15);
+    
+
+  }
+  
+  .b1:hover {
+    animation-name: gradient;
+    animation-duration: 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    box-shadow: 0 0.4rem 3rem rgba(231, 105, 221,0.5);
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+  .b2
+{
+    font: .9em Raleway, sans-serif;
+    margin-left: 50px;
+    height: 2.5rem;
+    letter-spacing: 0.05em;
+    width: 7rem;
+    color:white;
+    font-weight: bolder;
+    text-shadow: 1px 1px rgb(54, 50, 50,0.29);
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5rem;
+    border-color: rgb(18, 128, 230) rgb(250, 147, 229) rgb(250, 147, 229) rgb(18, 128, 230); 
+}
+
+.b2:hover {
+    
+    background: white;
+    border: none;
+    color: black;
+    box-shadow: 0 0.9rem 5rem rgba(245, 245, 245, 1);
+  }
+  
+
+
+/* MEDIA LANDING SECTION */
+
+
+@media (max-width: 1110px) {
+    .lan1 {
+        padding: 0px;
+        position: absolute;
+        left:65%;
+        right:50%;
+        transform: translate(-190px,70px);
+        
+       
+    }
+    .text4
+    {
+        font-size: 25px;
+    }
+}
+
+
+
+
+@media (max-width: 950px) {
+  
+
+.nav
+{
+    display: inline-block;
+}
+.lan1
+   {
+     display:inline-block;
+     margin: 0px;
+     padding: 0px;
+     width:400px;
+     position: absolute;
+     left:50%;
+     right:50%;
+     transform: translate(-200px,50px);
+   }
+.text
+{
+    
+    transform: translate(-1%,65%);
+    text-align: center;
+}
+.text4
+{
+font-size: 25px;
+}
+
+.buttons
+{
+    transform: translate(-1%,210%);
+    text-align: center;
+}
+.b2
+    {
+      color:black;
+    }
+    .b2:hover
+    {
+        background: black;
+        border: none;
+        color: white;
+        box-shadow: 0 0.9rem 5rem rgba(245, 245, 245, 1);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .lan1
+    {
+      display:inline-block;
+      margin: 0px;
+      padding: 0px;
+      width:300px;
+      position: absolute;
+      left:50%;
+      right:50%;
+      transform: translate(-130px,70px);
+    }
+
+#text2
+{
+    padding-top:30px ;
+    font-size: 30px;
+}
+#text3
+{
+    font-size: 15px;
+}
+.text4
+{
+    font-size: 20px;
+}
+.buttons
+{
+    transform: translate(-1%,190%);
+    text-align: center;
+    
+}
+
+}
+
+/* LANDING IMAGE SECTION ENDS  */
+
+
+/* ABOUT SECTION */
+
+
+.about
+{
+    width:100%;
+    height: 800px;
+   
+}
+
+.title1
+{
+    text-align: center;
+    padding-top: 180px;
+    font-size: 500%;
+    padding-bottom: 20px;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    letter-spacing: 10px;
+    
+}
+
+
+
+.pp1
+{
+    float: right;
+    width:28%;
+    padding: 80px 80px 0px 0px;
+    position: relative;
+    z-index: 100;
+    
+}
+
+.pp2
+{
+    
+    position: right;
+    width:45%;
+    position: absolute;
+    right: -50px;
+    transform: translateY(-40px);
+    
+    
+}
+
+.pp1:hover
+{
+    animation-name: shake;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.info
+{
+    width:650px;
+    height: 130px;
+    border-left: 3px solid rgb(0, 0, 0);
+    transform: translate(110px, 170px);
+    
+}
+
+
+#t1
+{
+    font-size: 300%;
+    transform: translate(20px, 0px);
+    
+}
+#t2
+{
+    font-size: 120%;
+    transform: translate(20px, 20px);
+    word-wrap: break-word;
+    text-align: left;
+    color: gray;
+    text-shadow: 0.2px 0px black;
+    
+}
+
+#b3
+{
+    transform: translate(120px, 220px);
+    color: white;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 3rem;
+    border-color:black ;
+    box-shadow: 0 0.5rem 2rem  gray;
+    
+}
+
+#b3:hover
+{
+    background-color: white;
+    color: black;
+    text-shadow: 0.2px 0px black;
+    border:2.5px solid black;
+    cursor: pointer;
+    transition: 0.5s;
+    border-color:black ;
+    box-shadow: 0 0.5rem 2rem  white;
+}
+
+/* MEDIA ABOUT SECTION  */
+
+
+/* ABOUT SECTION ENDS */
+
+
+/* SERVICE SECTION STARTS */
+
+
+.service
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #222;
+padding-bottom: 100px;
+
+}
+
+.title2
+{
+   
+    text-align: center;
+    padding-top: 100px;
+    font-size: 500%;
+    justify-content: space-between;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    letter-spacing: 10px;
+}
+.subheading
+{
+    text-align: center;
+    font-family: serif;
+    font-weight: 550;
+    padding-bottom: 20px;
+}
+
+
+
+
+.container
+{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+   
+}
+
+.container .card
+{
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 45%;
+    margin: 30px 0px;
+    border:2px solid white;
+    
+   
+}
+
+.container .card .imgbx
+
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+   
+
+}
+
+.container .card:hover .imgbx
+{
+    width: 150px;
+    height: 150px;
+    padding-top: 0px;
+    left:-75px;
+    top:calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(to right, violet, cyan);
+    border:2px solid transparent;
+    border-image: linear-gradient(to right,cyan, violet);
+    border-image-slice: 1;
+
+}
+
+.container .card .imgbx:before
+{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgb(255, 255, 255,.05);
+    font-weight: 700;
+}
+
+.container .card .imgbx img
+{
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.container .card:hover .imgbx img
+{
+    max-width: 75px;
+    
+}
+
+.container .card .content
+{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+.container .card .content h3
+{
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.container .card .content a
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* MEDIA SERVICE SECTION  */
+
+
+@media (max-width:992px)
+{
+.container
+{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .card
+{
+    width: 400px;
+}
+
+}
+
+
+@media (max-width:768px)
+{
+
+    .container .card
+    {
+        max-width: 400px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .card .imgbx
+    {
+        position: relative;
+
+    }
+    .container .card .imgbx,
+    .container .card:hover .imgbx
+    {
+        width: 100%;
+        height: 200px;
+        left: 0; 
+    }
+
+    .container .card .imgbx img,
+    .container .card:hover .imgbx .img
+    {
+        max-width: 100px;
+    }
+
+    .container .card .content 
+    {
+        position: relative;
+        width: 100%;
+    }
+
+
+
+}
+
+
+/* SERVICE SECTION ENDS  */
+
+/* QUOTE SECTION STARTS  */
+
+.quotesection
+{
+    max-height: 700px;
+    overflow-y: hidden;
+    
+    
+}
+.title3
+{
+   
+    text-align: center;
+    font-size: 500%;
+    justify-content: space-between;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    letter-spacing: 10px;
+}
+
+
+#particles-js
+{
+    padding-top: 100px;
+    background: #222;
+    text-align:center;
+    
+    
+    
+}
+
+#quote
+{
+    width: 80%;
+    height: 200px;
+    display: inline-block;
+    transform: translateY(-500px);
+    background-color: rgba(255, 255, 255, 0.438);
+    border-radius: 30px;
+    overflow:hidden;
+}
+
+#quote:hover
+{
+    box-shadow: 0 0rem 2rem  rgb(255, 255, 255,0.589);
+   
+}
+
+
+
+
+
+
+/* MEDIA QUOTE STARTS  */
+
+
+/* QUOTE SECTION ENDS  */
+
+/* BLOG SECTION STARTS  */
+
+.blogsection
+{
+    width: 100%;
+    height: 700px;
+   
+}
+
+.title4
+{
+   
+    text-align: center;
+    font-size: 500%;
+    justify-content: space-between;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    padding-top: 40px;
+    letter-spacing: 10px;
+}
+
+#b4
+{
+    transform: translate(335px, -270px);
+    color: white;
+    background-color: black;
+    padding: 15px 50px;
+    border-radius: 3rem;
+    border-color:black ;
+    
+    box-shadow: 0 0.5rem 2rem  gray;
+    
+}
+
+#b4:hover
+{
+    background-color: white;
+    color: black;
+    text-shadow: 0.2px 0px black;
+    border:2.5px solid black;
+    cursor: pointer;
+    transition: 0.5s;
+    border-color:black ;
+    box-shadow: 0 0.5rem 2rem  white;
+}
+
+
+#blogt1
+{
+    display: inline-block;
+    transform: translate(50px,-200px);
+    font-size: 15px;
+    
+}
+
+#blogimg
+{
+    animation: bouncy 3s linear infinite;
+}
+ @keyframes bouncy {
+     
+  
+50%{transform: translateY(-40px);}
+ 
+}
+
+
+
+
+
+/* MEDIA BLOG STARTS  */
+
+
+/* BLOG SECTION ENDS  */
+
+
+/* TESTIMONIAL SECTION STARTS  */
+
+.testimonialsection
+{
+    width: 100%;
+    height: 700px;
+    
+}
+
+.title5
+{
+   
+    text-align: center;
+    font-size: 500%;
+    justify-content: space-between;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    padding-top: 40px;
+    letter-spacing: 10px;
+}
+
+
+
+
+
+.tcard {
+    position: relative;
+    width: 40%;
+    padding-bottom: 30%;
+    padding-top: 100px;
+    margin: auto;
+    transform: translateX(60px);
+   
+    
+  }
+    .tbox
+    { position: absolute;
+      margin-top: 50px;
+      transition: all 0.4s ease;
+      background: linear-gradient(to right, violet, cyan);
+      border-radius: 20px;
+      box-shadow: 0 0 22px 10px rgba(0, 0, 0, 0.212);
+      overflow: hidden;
+      
+    }
+    
+    
+
+    .small {
+      height: 80%;
+      width: 60%;
+      margin-top: 15px;
+      z-index: 3;
+      background: rgba(0, 174, 255, 0.493);
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      filter: blur(2px);
+      overflow: hidden;
+      
+    }
+    .smaller {
+      height: 70%;
+      width: 60%;
+      margin-top: 30px;
+      z-index: 2;
+      background:rgba(174, 0, 255, 0.315);
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      filter: blur(3px);
+      overflow: hidden;
+    }
+    .active-img {
+      height: 100%;
+      width: 70%;
+      margin-top: 0;
+      z-index: 4;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+    }
+    .prev-btn,
+    .next-btn {
+      position: absolute;
+      text-decoration: none; 
+      z-index: 5;
+    }
+    .prev-btn {
+      left: -75%;
+      top: 60%;
+      margin-top: -15px;
+    }
+    .next-btn {
+      right: -55%;
+      top: 60%;
+      margin-top: -15px;
+    }
+     
+  #nicon
+  {
+      width:35px
+  }
+
+ 
+    
+  .active-img {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(7%, 0, 0);
+  }
+  .prev {
+    -webkit-transform: translate3d(-35%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+  .next {
+    -webkit-transform: translate3d(55%, 0, 0);
+    transform: translate3d(90%, 0, 0);
+  }
+  .prevSmall {
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .nextSmall {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(135%, 0, 0);
+  }
+
+      
+  /* ---------- */
+  .timg
+{
+    width: 250px;
+    border: 3px solid#fff;
+    border-radius: 120px;
+    z-index: 6;
+    
+    
+}
+.timage
+{
+    text-align: center; 
+    padding-top: 50px; 
+    z-index: 7;
+}
+
+.tname
+{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 30px;
+    color: #fff;
+    text-shadow:0px 2px 5px rgb(68, 67, 67);
+}
+.tpos
+{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.ticon
+{
+    width:40px;
+    
+}
+
+
+.ticoned
+{
+    text-align: center;
+    padding-top: 40px;
+}
+.review
+{
+    margin:25px;
+    text-align: center;
+    font-size: 17px;
+    font-style: italic;
+    text-shadow:0px 2px 5px rgb(146, 144, 144);
+}
+
+.tbox:hover
+{
+    overflow: visible;
+      
+}
+.tquote
+{
+    text-align: center;
+}
+.tquoteimg
+{
+    width: 50px;
+}
+
+.tbox:hover .timg
+{
+    width: 200px;
+    animation: rotation 2s;
+}
+
+ .tbox:hover > .timage
+{
+overflow-y: visible;
+transform: translateY(-140px);
+transition: 0.5s ease-in-out;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to { 
+      transform: rotate(359deg);
+    }
+  }
+
+
+
+.tbox:hover .tname
+{
+    transform: translateY(-140px);
+    font-size: 35px;
+    transition: 0.5s ease-in-out;
+    letter-spacing: 5px;
+}
+.tbox:hover .tpos
+{
+    transform: translateY(-140px);
+    transition: 0.5s ease-in-out;
+}
+
+.tbox:hover .review
+{
+    transform: translateY(-270px);
+    transition: 0.5s ease-in-out;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+
+
+
+
+.tbox:hover .ticoned
+{
+    text-align: center;
+    padding-top: 85px;
+    transition: 0.5s ease-in-out;
+    
+}
+.tbox:hover .tquote
+{
+    transform: translateY(-260px);
+    transition: 0.5s ease-in-out;
+    animation: fadeIn 3s;
+}
+
+#amail
+{
+    background: none;
+}
+
+/* MEDIA TESTIMONIAL STARTS  */
+
+
+/* TESTIMONIAL SECTION ENDS  */
+
+
+
+       
+   
+       
+
+
+
+/* MUSIC SECTION STARTS  */
+
+.musicsection
+{
+    padding-top: 80px;
+    margin-top: 160px;
+    width: 100%;
+    height:700px;
+    /* background-color: #222; */
+    
+}
+
+.title6
+{
+   
+    text-align: center;
+    font-size: 650%;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    transform: translate(300px, 340px);
+    letter-spacing: 10px;
+   
+}
+#mtitle
+{
+    transform: translate(840px, 340px);
+    font-size: 20px;
+    letter-spacing: 15px;
+    color:rgb(255, 93, 93);
+    text-shadow: 0.2px 0px rgb(121, 114, 114);
+   
+}
+
+#micon
+{
+    transform: translate(830px, -100px);
+    width: 270px;
+    
+}
+
+
+#mbox
+{
+    background-color: rgb(248, 248, 248);
+    height: 500px;
+    width: 330px;
+    transform: translate(200px, -390px);
+    border-radius: 40px;
+    /* box-shadow: 0px 0px 50px 0px rgba(245, 242, 242, 0.89); */
+    box-shadow: 0px 0px 50px 0px rgba(92, 91, 91, 0.5);
+}
+
+#mbox1
+{
+   
+    background-color: rgb(255, 255, 255);
+    height: 270px;
+    width: 270px;
+    transform: translate(-100px, 50px);
+    border-radius: 40px;
+    box-shadow: 0px 40px 50px 3px rgba(0, 0, 0, 0.733);
+
+
+    /* =====MUSIC IMAGE LINK===== */
+
+    background-image: url("./images/song.jpg") ;
+    
+}
+
+#mname
+{
+    transform: translate(20px, 100px);
+    font-size: 25px;
+    letter-spacing: 5px;
+    color:rgb(77, 66, 66);
+    text-shadow: 0.2px 0px rgb(121, 114, 114);
+    
+}
+#sname
+{
+    transform: translate(25px, 110px);
+    font-size: 13px;
+    letter-spacing: 5px;
+    color:rgb(134, 129, 129);
+    text-shadow: 0.2px 0px rgb(134, 129, 129);
+    
+}
+
+
+
+
+#play-pause
+{
+    width: 90px;
+    transform: translate(210px,-100px);
+    cursor: pointer;
+}
+
+#progress-bar
+{
+    width: 300px;
+    transform: translate(12px,40px);
+    
+}
+
+.currentTime
+{
+    font-size: 15px;
+    transform: translate(25px, 40px);
+    color: rgb(105, 114, 114);
+    letter-spacing: 2px;
+}
+
+.durationTime
+{
+    font-size: 15px;
+    transform: translate(270px, -15px);
+    color: rgb(105, 114, 114);
+    letter-spacing: 2px;
+}
+
+
+/* ======= */
+
+#mex
+{
+    transform: translate(433px,-830px);
+    width: 50px;
+}
+
+.meximg
+{
+    width: 46px;
+    opacity: 0.7;
+    
+}
+
+.meximg:hover
+{
+  box-shadow: 0px 0px 10px 5px rgba(158, 158, 158, 0.151);  
+  border-radius: 100px;
+  padding: 4px;
+  transition: 0.5s ease-in-out;
+}
+
+.mexv:hover
+{
+background:none ;
+}
+
+
+
+#mex:hover .imgvmss
+{
+    display: block; 
+}
+
+
+
+/* ======= */
+
+#mdimg
+{
+    width: 50px;
+    
+}
+
+
+
+#mdimg:hover
+{
+   
+  box-shadow: 0px 0px 10px 5px rgba(158, 158, 158, 0.151);  
+  border-radius: 100px;
+  padding: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+#mda:hover
+{
+background:none ;
+}
+
+
+#md
+{
+    transform: translate(430px, -810px);
+    width: 30px;
+}
+
+
+.imgdmss
+{
+    transform: translate(-6px,5px);
+    font-size: 9px;
+    color: rgba(167, 167, 167, 0.671);
+    letter-spacing: 2px;
+    display: none;
+    padding-top: 0px;
+}
+
+#md:hover .imgdmss
+{
+    display: block; 
+}
+
+
+
+/* MEDIA MUSIC STARTS  */
+
+
+/* MUSIC SECTION ENDS  */
+
+
+/* CONTACT STARTS  */
+
+.sm
+{
+    width: 100%;
+    height: 600px;
+    background-color: #222;
+    display: inline-block;
+    position: absolute;
+    
+}
+
+#coimg
+{
+    width: 550px;
+    transform: translate(50px, 50px);
+    opacity: 0.8;
+}
+.title7
+{
+   
+    text-align: center;
+    font-size: 500%;
+    color:rgb(255, 93, 93);
+    font-family: 'Stick No Bills', sans-serif;
+    text-shadow: 0.2px 0px rgb(184, 6, 6);
+    transform: translate(-340px,50px);
+    letter-spacing: 10px;
+   
+}
+
+#ctitle
+{
+    color: #ee786e;
+    transform: translate(167px,60px);
+    letter-spacing: 10px;
+    font-size: 10px;
+}
+
+.mousehover
+{
+    background-color: #222;
+    width: 50%;
+    height: 600px;
+    
+    position: absolute;
+    left:50%;
+    top:0%;
+}
+.ccc
+{
+    color: #222;
+}
+.cursor
+{
+height:100px;
+width:100px;
+background-color: white;
+border-radius: 50%;
+position: absolute;
+
+}
+
+
+/* MEDIA CONTACT STARTS  */
+
+
+/* CONTACT SECTION ENDS  */
+
+/* MEDIA MUSIC STARTS  */
+
+/* MEDIA MUSIC STARTS  */
+
+
+/* MUSIC SECTION ENDS  */
