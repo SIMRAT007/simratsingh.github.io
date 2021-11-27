@@ -1,0 +1,661 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/* @import url('http://fonts.cdnfonts.com/css/anurati'); font-family: 'Anurati', sans-serif; */
+                                                
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+    
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO START*/
+
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+}
+
+.logo {
+    padding-top: 5px;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lname {
+    font-family: 'Cookie', cursive;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    padding-top: 27px;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.lname:hover
+{
+    border: none;
+}
+
+
+.slogan {
+    font-size: 10px;
+    font-family: arial;
+    color: rgb(0, 0, 0);
+    padding-left: 37px;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    letter-spacing: 2px;
+    
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+a.active {
+    background: linear-gradient(to right, rgb(127, 195, 235), rgba(255, 0, 234, 0.938));
+    transition: .4s;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    transition: .1s;
+    text-shadow: none;
+    border-radius: 0px;
+    border-bottom: 2px solid black;
+}
+
+a.contact {
+    border-radius: 20px;
+    border: 2.5px solid;
+    border-color: white;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: purple;
+    }
+    50% {
+        border-color: cyan;
+    }
+    75% {
+        border-color: lime;
+    }
+    100% {
+        border-color: yellow;
+        ;
+    }
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#copyright, #heart
+{
+    display: none;
+    
+}
+
+
+/* MEDIA FOR NAVIGATION BAR AND LOGO */
+.head
+{
+    width: 100%;
+    height: 600px;
+    
+}
+
+
+@media (max-width: 992px) {
+    nav ul li a {
+        font-size: 16px;
+        z-index: 10;
+        
+    }
+    .logo{
+        padding-left:15px ;
+    }
+    .checkbtn {
+        display: block;
+        padding-right: 2px;
+        padding-top: 6px;
+    }
+  
+}
+
+@media (max-width: 1110px) {
+    .checkbtn {
+        display: block;
+        padding-right: 10px;
+        z-index: 10;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        padding-top: 10px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    a.contact {
+        color: white;
+        border: none;
+    }
+    a.contact:hover {
+        color: #0082e6;
+        border: none;
+    }
+    #copyright
+    {
+        display: block;
+        padding-top: 30px;
+        color: grey;
+        display: inline-block;
+        
+        
+    }
+    #heart
+    {
+        color: red;
+        display: inline-block;
+        padding-left: 5px;
+        
+    }
+
+}
+
+@media (max-width: 450px) {
+    .lname {
+        display: none;
+        z-index: 10;
+    }
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO END */
+
+/* HEAD START */
+
+#heading
+{
+    font-size: 40px;
+    padding-top: 200px;
+    padding-left: 240px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    
+}
+#heading1
+{
+    font-size: 12px;
+    padding-top: 150px;
+    padding-left: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: center;
+    word-wrap: break-word;
+    
+}
+
+#down
+{
+    margin-top: 50px;
+    margin-left: 330px;
+    font-size: 40px;
+}
+
+/* HEAD END */
+
+/* PROJECT STARTS */
+
+.project
+{
+    margin-top: 50px;
+    width: 100%;
+    height:400
+}
+
+
+.card {
+    background-color: rgb(225, 226, 228);
+    color: white;
+    padding: 0.5rem;
+    height: 20.5em;
+    
+  }
+  
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    padding-top: 10%;
+  }
+
+.inner
+{
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    height: 9em;
+    margin: auto;
+    margin-top: 45%;
+    text-align: center;
+    
+}
+
+.card:hover .inner
+{
+   
+    box-shadow: 0px 0px 10px 1px #3030307c;
+    margin-top: 43%;
+    transition: 0.5s; 
+    height: 9em; 
+    margin-top: 47%; 
+}
+
+.card:hover
+{
+   
+    box-shadow: 0px 0px 10px 1px #3030307c;
+    transition: 0.5s;
+    height: 10em;   
+}
+
+
+.pt 
+{
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    padding-top: 5px;
+
+}
+
+
+.pt1 
+{
+    color: rgb(153, 152, 152);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding-top: 20px;
+
+}
+
+.l
+{
+    color: black;
+    display: inline-flex;
+    font-size: 90%;
+    padding-top: 10px;
+    text-indent: 10px;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    color: tomato;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Screen larger than 600px? 2 column */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+/* PROJECT END */
+
+
+
+
+/* FOOTER START */
+
+.foot
+{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(21,20,20);
+    margin-top: 200px;
+    position: relative;
+}
+
+.flogo {
+    padding-top: 55px;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#fname {
+    font-family: 'Cookie', cursive;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    padding-top: 75px;
+    padding-left: 20px;
+    color: white;
+}
+
+a.lname:hover {
+    color: white;
+    background: none;
+}
+
+.flogan {
+    font-size: 10px;
+    font-family: arial;
+    color: rgb(206, 205, 205);
+    padding-left: 37px;
+    
+}
+
+.footer-text
+{
+    padding-top: 40px;
+    padding-left: 50px;
+    width: 350px;
+}
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #8d8d8d;
+    line-height: 28px;
+    word-wrap: break-word;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+/* ====social==== */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container {
+  width: 400px;
+  margin:2vh 0;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+  transform: translateX(-50px);
+}
+.social-icons .ili {
+  display: inline-block;
+  margin: 0.3em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  transition: all 265ms ease-out;
+}
+.social-icons .sa {
+  display: inline-block;
+  border: none;
+}
+.social-icons .sa:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons .sa:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons .sa:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+#heading
+{
+    font-size: 18px;
+    padding-top: 80px;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 5px;
+    color: #fff;
+    padding-left: 50px;
+    
+}
+.sa:hover
+{
+    background: none;
+}
+
+.link
+{
+    
+    display: inline-flex;
+    position: absolute;
+    right: 610px;
+    top: 0px;
+    width: 300px;
+    height: 400px;
+}
+
+#fh
+{
+font-size: 20px;
+color: #fff;
+letter-spacing: 2px;
+padding-top: 80px;
+font-family: 'Quicksand', sans-serif;
+padding-left: 0px;
+}
+
+
+.fli
+{
+    list-style-type: none;
+    padding-top: 20px;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    color: gray;
+    letter-spacing: 2px;
+    
+}
+
+.la
+{
+    color: gray;
+}
+.la:hover
+{
+    background: none;
+    color: white;
+   
+}
+
+.links
+{
+    padding-top: 150px;
+    text-align: left;
+    transform: translateX(-170px);
+    
+}
+
+#fhr
+{
+    position: absolute;
+    left: 50px;
+    top: 70px;
+    transform: rotate(90deg);
+    height: 100px;
+    color:gray;
+    
+}
+
+
+
+#address
+{
+    
+    display: inline-flex;
+    position: absolute;
+    
+    transform: translateX(350px);
+    top: 65px;
+    width: 500px;
+    height: 50px;
+    
+}
+#fa
+{
+    margin: auto;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: rgb(175, 174, 174);
+}
+
+.map
+{
+    
+    display: inline-flex;
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    width: 500px;
+    height: 300px;
+}
+
+
+.copyright
+{
+    width: 100%;
+    height: 40px;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#cp
+{
+    color: black;
+    letter-spacing: 3px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    margin: 1px auto;
+    font-weight: bold;
+}
+/* FOOTER SECTION ENDS  */

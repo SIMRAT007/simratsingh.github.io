@@ -1,0 +1,337 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/* @import url('http://fonts.cdnfonts.com/css/anurati'); font-family: 'Anurati', sans-serif; */
+                                                
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+    
+}
+
+body {
+    overflow-x: hidden;
+    background: #FAFAFA;
+    min-height: 100vh;
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO START*/
+
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+}
+
+.logo {
+    padding-top: 5px;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lname {
+    font-family: 'Cookie', cursive;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.lname:hover
+{
+    border: none;
+    background-color: #FAFAFA;
+}
+
+
+.slogan {
+    font-size: 10px;
+    font-family: arial;
+    color: rgb(0, 0, 0);
+    padding-left: 37px;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    letter-spacing: 2px;
+    
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+
+
+a:hover {
+    color: rgb(0, 0, 0);
+    background: #FAFAFA;
+    transition: .1s;
+    text-shadow: none;
+    border-radius: 0px;
+    border-bottom: 2px solid black;
+}
+
+a.contact {
+    border-radius: 20px;
+    border: 2.5px solid;
+    border-color: white;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: purple;
+    }
+    50% {
+        border-color: cyan;
+    }
+    75% {
+        border-color: lime;
+    }
+    100% {
+        border-color: yellow;
+        ;
+    }
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#copyright, #heart
+{
+    display: none;
+    
+}
+
+
+/* MEDIA FOR NAVIGATION BAR AND LOGO */
+.head
+{
+    width: 100%;
+    height: 600px;
+    
+}
+
+
+@media (max-width: 992px) {
+    nav ul li a {
+        font-size: 16px;
+        z-index: 10;
+        
+    }
+    .logo{
+        padding-left:15px ;
+    }
+    .checkbtn {
+        display: block;
+        padding-right: 2px;
+        padding-top: 6px;
+    }
+  
+}
+
+@media (max-width: 1110px) {
+    .checkbtn {
+        display: block;
+        padding-right: 10px;
+        z-index: 10;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        padding-top: 10px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    a.contact {
+        color: white;
+        border: none;
+    }
+    a.contact:hover {
+        color: #0082e6;
+        border: none;
+    }
+    #copyright
+    {
+        display: block;
+        padding-top: 30px;
+        color: grey;
+        display: inline-block;
+        
+        
+    }
+    #heart
+    {
+        color: red;
+        display: inline-block;
+        padding-left: 5px;
+        
+    }
+
+}
+
+@media (max-width: 450px) {
+    .lname {
+        display: none;
+        z-index: 10;
+    }
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO END */
+
+.form
+{
+    width: 100%;
+    height: 800px;
+    margin-top: 20px;
+}
+
+
+/* SOCIAL MEDIA STARTS */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container {
+  width: 400px;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.social-icons .sa {
+  display: inline-block;
+  border: none;
+}
+.social-icons .sa:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons .sa:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons .sa:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+#heading
+{
+    font-size: 30px;
+    padding-top: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+/* ============================= */
+
+/* FOOTER SECTION */

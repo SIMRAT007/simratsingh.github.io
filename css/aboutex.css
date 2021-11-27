@@ -1,0 +1,879 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/* @import url('http://fonts.cdnfonts.com/css/anurati'); font-family: 'Anurati', sans-serif; */
+                                                
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+   
+    
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO START*/
+
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+}
+
+.logo {
+    padding-top: 5px;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lname {
+    font-family: 'Cookie', cursive;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    padding-top: 27px;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.lname:hover
+{
+    border: none;
+}
+
+
+.slogan {
+    font-size: 10px;
+    font-family: arial;
+    color: rgb(0, 0, 0);
+    padding-left: 37px;
+    
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+nav ul .nav1 {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    letter-spacing: 2px;
+    
+}
+
+nav ul .nav1 a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.nav2.active {
+    background: linear-gradient(to right, rgb(127, 195, 235), rgba(255, 0, 234, 0.938));
+    transition: .4s;
+    color: rgb(255, 255, 255);
+}
+
+.nav2:hover {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    transition: .1s;
+    text-shadow: none;
+    border-radius: 0px;
+    border-bottom: 2px solid black;
+}
+
+.nav2.contact {
+    border-radius: 20px;
+    border: 2.5px solid;
+    border-color: white;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: purple;
+    }
+    50% {
+        border-color: cyan;
+    }
+    75% {
+        border-color: lime;
+    }
+    100% {
+        border-color: yellow;
+        ;
+    }
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#copyright, #heart
+{
+    display: none;
+    
+}
+
+
+/* MEDIA FOR NAVIGATION BAR AND LOGO */
+.head
+{
+    width: 100%;
+    height: 600px;
+    
+}
+
+
+@media (max-width: 992px) {
+    nav ul li a {
+        font-size: 16px;
+        z-index: 10;
+        
+    }
+    .logo{
+        padding-left:15px ;
+    }
+    .checkbtn {
+        display: block;
+        padding-right: 2px;
+        padding-top: 6px;
+    }
+  
+}
+
+@media (max-width: 1110px) {
+    .checkbtn {
+        display: block;
+        padding-right: 10px;
+        z-index: 10;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 10;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        padding-top: 10px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    a.contact {
+        color: white;
+        border: none;
+    }
+    a.contact:hover {
+        color: #0082e6;
+        border: none;
+    }
+    #copyright
+    {
+        display: block;
+        padding-top: 30px;
+        color: grey;
+        display: inline-block;
+        
+        
+    }
+    #heart
+    {
+        color: red;
+        display: inline-block;
+        padding-left: 5px;
+        
+    }
+
+}
+
+@media (max-width: 450px) {
+    .lname {
+        display: none;
+        z-index: 10;
+    }
+    
+}
+
+
+
+/* NAVIGATION BAR AND LOGO END */
+
+
+.about
+{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-image: url(../images/ab.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 30px;
+}
+
+.asec
+{
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    top: 200px;
+    left:30%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px #3030307c;
+    text-align: center;
+}
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container {
+  
+  margin:2vh 0;
+  text-align: center;
+ 
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 0.5em;
+  
+}
+.social-icons .ili {
+  display: inline-block;
+  margin: 0.3em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  transition: all 265ms ease-out;
+}
+.social-icons .sa {
+  display: inline-block;
+  border: none;
+}
+.social-icons .sa:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+.social-icons .sa:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons .sa:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+#heading
+{
+    font-size: 18px;
+    padding-top: 80px;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+
+
+/* =========skills========= */
+
+.skill
+{
+    width: 100%;
+    height: 600px;
+    
+    position: absolute;
+    transform: translateX(-100px);
+    top:950px;
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  background: #ffffff;
+  cursor: default;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  transition-duration: 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  color: #ffb300;
+  margin: 10px 0;
+  text-transform: lowercase;
+  font-size: 1.25em;
+}
+
+.resume {
+  width: 960px;
+  background: #1a237e;
+  color: #ffffff;
+  margin: 20px auto;
+  box-shadow: 10px 10px #0e1442;
+  position: relative;
+  display: flex;
+}
+
+.resume .base,
+.resume .func {
+  box-sizing: border-box;
+  float: left;
+}
+
+.resume .base > div,
+.resume .func > div {
+  padding-bottom: 10px;
+}
+
+.resume .base > div:last-of-type,
+.resume .func > div:last-of-type {
+  padding-bottom: 0;
+}
+
+.resume .base {
+  width: 30%;
+  padding: 30px 0px;
+  background: #ffffff;
+  color: #ffffff;
+}
+
+.resume .base .profile {
+  background: #ffb300;
+  padding: 30px 15px 40px 15px;
+  margin: -30px -15px 0px 00px;
+  position: relative;
+  z-index: 2;
+}
+
+.resume .base .profile::after {
+  content: "";
+  position: absolute;
+  background: #303f9f;
+  width: 100%;
+  height: 30px;
+  bottom: -15px;
+  left: 0;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+.resume .base .profile .photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.resume .base .profile .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume .base .profile .fa-rocket {
+  font-size: 100px;
+  text-align: center;
+  margin: auto;
+  color: #283593;
+}
+
+.resume .base .profile .info {
+  text-align: center;
+  color: #ffffff;
+}
+
+.resume .base .profile .info .name {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.75em;
+  text-transform: lowercase;
+  color: #1a237e;
+}
+
+.resume .base .profile .info .job {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  text-transform: lowercase;
+  color: #283593;
+}
+
+.resume .base .contact div {
+  line-height: 24px;
+}
+
+.resume .base .contact div a:hover {
+  color: #fdd835;
+}
+
+.resume .base .contact div a:hover span::after {
+  width: 100%;
+}
+
+.resume .base .contact div:hover i {
+  color: #fdd835;
+}
+
+.resume .base .contact div i {
+  color: #ffb300;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+
+.resume .base .contact div span {
+  position: relative;
+}
+
+.resume .base .contact div span::after {
+  content: "";
+  position: absolute;
+  background: #fdd835;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.resume .base .follow .box a {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.resume .base .follow .box a:hover i {
+  background: #fdd835;
+  border-radius: 5px;
+  transform: rotate(45deg) scale(0.8);
+}
+
+.resume .base .follow .box a:hover i::before {
+  transform: rotate(-45deg) scale(1.5);
+}
+
+.resume .base .follow .box i {
+  display: inline-block;
+  font-size: 30px;
+  background: #ffb300;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 60px;
+  color: #ffffff;
+  margin: 0 10px 10px 10px;
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box i::before {
+  transition-duration: 0.3s;
+}
+
+.resume .base .follow .box i.fa::before {
+  display: block;
+}
+
+.resume .func {
+  width: 100%;
+  padding: 0px;
+ 
+}
+
+.resume .func:hover > div {
+  transition-duration: 0.5s;
+}
+
+.resume .func:hover > div:hover h3 i {
+  transform: scale(1.25);
+}
+
+.resume .func:hover > div:not(:hover) {
+  opacity: 0.5;
+}
+
+.resume .func h3 {
+  transition-duration: 0.3s;
+  margin-top: 0;
+}
+
+.resume .func h3 i {
+  color: #283593;
+  background: #ffb300;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  line-height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition-duration: 0.3s;
+}
+
+.resume .func .work,
+.resume .func .edu {
+  float: left;
+}
+
+.resume .func .work small,
+.resume .func .edu small {
+  display: block;
+  opacity: 0.7;
+}
+
+.resume .func .work ul li,
+.resume .func .edu ul li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+
+.resume .func .work ul li:hover::before,
+.resume .func .edu ul li:hover::before {
+  -webkit-animation: circle 1.2s infinite;
+          animation: circle 1.2s infinite;
+}
+
+.resume .func .work ul li:hover span,
+.resume .func .edu ul li:hover span {
+  color: #fdd835;
+}
+
+@-webkit-keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #fdd835;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #fdd835;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
+}
+.resume .func .work ul li:first-of-type::before,
+.resume .func .edu ul li:first-of-type::before {
+  width: 10px;
+  height: 10px;
+  left: 1px;
+}
+
+.resume .func .work ul li:last-of-type,
+.resume .func .edu ul li:last-of-type {
+  padding-bottom: 3px;
+}
+
+.resume .func .work ul li:last-of-type::after,
+.resume .func .edu ul li:last-of-type::after {
+  border-radius: 1.5px;
+}
+
+.resume .func .work ul li::before,
+.resume .func .work ul li::after,
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.resume .func .work ul li::before,
+.resume .func .edu ul li::before {
+  width: 7px;
+  height: 7px;
+  border: 3px solid #ffffff;
+  background: #ffb300;
+  border-radius: 50%;
+  left: 3px;
+  z-index: 1;
+}
+
+.resume .func .work ul li::after,
+.resume .func .edu ul li::after {
+  width: 3px;
+  height: 100%;
+  background: #ffffff;
+  left: 5px;
+  top: 0;
+}
+
+.resume .func .work ul li span,
+.resume .func .edu ul li span {
+  transition-duration: 0.3s;
+}
+
+.resume .func .work {
+  width: 48%;
+  background: #283593;
+  padding: 15px;
+  margin: 0 4% 15px 0;
+}
+
+.resume .func .edu {
+  width: 48%;
+  background: #283593;
+  padding: 15px;
+}
+
+.resume .func .skills-prog {
+  clear: both;
+  background: #283593;
+  padding: 15px;
+}
+
+.resume .func .skills-prog ul {
+  margin-left: 15px;
+}
+
+.resume .func .skills-prog ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+
+.resume .func .skills-prog ul li:hover {
+  color: #fdd835;
+}
+
+.resume .func .skills-prog ul li:hover .skills-bar .bar {
+  background: #fdd835;
+  box-shadow: 0 0 0 1px #fdd835;
+}
+
+.resume .func .skills-prog ul li span {
+  display: block;
+  width: 120px;
+}
+
+.resume .func .skills-prog ul li .skills-bar {
+  background: #ffffff;
+  height: 2px;
+  width: calc(100% - 120px);
+  position: relative;
+  border-radius: 2px;
+}
+
+.resume .func .skills-prog ul li .skills-bar .bar {
+  position: absolute;
+  top: -1px;
+  height: 4px;
+  background: #ffb300;
+  box-shadow: 0 0 0 #ffb300;
+  border-radius: 5px;
+}
+
+.resume .func .skills-soft {
+  clear: both;
+  background: #283593;
+  padding: 15px;
+  margin: 15px 0 0;
+}
+
+.resume .func .skills-soft ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.resume .func .skills-soft ul li {
+  position: relative;
+}
+
+.resume .func .skills-soft ul li:hover svg .cbar {
+  stroke: #fdd835;
+  stroke-width: 4px;
+}
+
+.resume .func .skills-soft ul li:hover span,
+.resume .func .skills-soft ul li:hover small {
+  transform: scale(1.2);
+}
+
+.resume .func .skills-soft ul li svg {
+  width: 95%;
+  fill: transparent;
+  transform: rotate(-90deg);
+}
+
+.resume .func .skills-soft ul li svg circle {
+  stroke-width: 1px;
+  stroke: #ffffff;
+}
+
+.resume .func .skills-soft ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: #ffb300;
+  stroke-linecap: round;
+}
+
+.resume .func .skills-soft ul li span,
+.resume .func .skills-soft ul li small {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 52%;
+  transition-duration: 0.3s;
+}
+
+.resume .func .skills-soft ul li span {
+  top: 40%;
+}
+
+.resume .func .interests {
+  background: #283593;
+  margin: 15px 0 0;
+  padding: 15px;
+}
+
+.resume .func .interests-items {
+  box-sizing: border-box;
+  padding: 0 0 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .func .interests-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.resume .func .interests-items div:hover i {
+  transform: scale(1.2);
+}
+
+.resume .func .interests-items div:hover span {
+  color: #fdd835;
+  transition-duration: 0.3s;
+}
+
+.resume .func .interests-items div i {
+  font-size: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #ffb300;
+  transition-duration: 0.3s;
+}
+
+.resume .func .interests-items div span {
+  display: block;
+}
